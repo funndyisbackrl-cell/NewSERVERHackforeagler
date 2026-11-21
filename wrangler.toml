@@ -1,0 +1,16 @@
+name = "REPLACE_WITH_YOUR_EXISTING_WORKER_NAME"
+main = "src/index.js"
+compatibility_date = "2026-11-20"
+workers_dev = true
+
+[[durable_objects.bindings]]
+name = "MCDONALDSMP_RELAY"
+class_name = "McDonaldsMPRelay"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["McDonaldsMPRelay"]
+
+[observability]
+enabled = true
+head_sampling_rate = 1
